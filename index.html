@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taciana Sevilhano — Product Manager</title>
+  <meta name="description" content="Portfolio de Taciana Sevilhano — Product Manager Sênior especializada em Estratégia & Escala de Plataformas Digitais." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f5f2eb;
+      --bg-alt: #ede9e0;
+      --text: #1c2218;
+      --text-muted: rgba(28,34,24,.52);
+      --text-faint: rgba(28,34,24,.35);
+      --primary: #3d5c32;
+      --primary-light: rgba(61,92,50,.1);
+      --primary-border: rgba(61,92,50,.2);
+      --border: rgba(61,92,50,.12);
+      --card-bg: #ffffff;
+      --max: 860px;
+      --pad: clamp(1.5rem, 5vw, 4rem);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.75;
+      font-size: 16px;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(245,242,235,.95);
+      backdrop-filter: blur(8px);
+      border-bottom: .5px solid var(--border);
+      padding: 1.2rem var(--pad);
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .nav-logo {
+      font-family: 'Fraunces', serif;
+      font-size: .95rem; letter-spacing: .06em; color: var(--text);
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex; gap: 2rem; list-style: none;
+      font-size: .68rem; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--text-faint);
+    }
+    .nav-links a {
+      color: inherit; text-decoration: none; transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--primary); }
+
+    /* ── HERO ── */
+    #inicio {
+      padding: 6rem var(--pad) 5rem;
+      max-width: var(--max);
+      margin: 0 auto;
+      border-bottom: .5px solid var(--border);
+      text-align: center;
+    }
+    .hero-badge {
+      display: inline-block;
+      font-size: .65rem; letter-spacing: .2em; text-transform: uppercase;
+      color: var(--primary);
+      border: .5px solid var(--primary-border);
+      padding: .35rem 1rem; border-radius: 100px;
+      margin-bottom: 2rem;
+    }
+    .hero-name {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+      font-weight: 400; line-height: 1.05;
+      color: var(--text);
+      white-space: nowrap;
+      margin-bottom: .6rem;
+    }
+    .hero-subtitle {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(1rem, 2vw, 1.3rem);
+      font-weight: 300; font-style: italic;
+      color: var(--primary);
+      margin-bottom: 2.5rem;
+    }
+    .hero-bio {
+      font-size: .9rem; color: var(--text-muted);
+      max-width: 620px; margin: 0 auto .8rem;
+      line-height: 1.9; text-align: center;
+    }
+    .hero-ctas {
+      display: flex; gap: 1rem; justify-content: center;
+      flex-wrap: wrap; margin-top: 2.5rem;
+    }
+    .btn-primary {
+      background: var(--primary); color: #f5f2eb;
+      border: none; padding: .7rem 1.8rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: .75rem; letter-spacing: .12em; text-transform: uppercase;
+      border-radius: 2px; cursor: pointer; text-decoration: none;
+      transition: background .2s;
+    }
+    .btn-primary:hover { background: #2d4025; }
+    .btn-outline {
+      background: transparent; color: var(--primary);
+      border: .5px solid var(--primary-border);
+      padding: .7rem 1.8rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: .75rem; letter-spacing: .12em; text-transform: uppercase;
+      border-radius: 2px; cursor: pointer; text-decoration: none;
+      transition: background .2s;
+    }
+    .btn-outline:hover { background: var(--primary-light); }
+
+    /* ── SECTIONS ── */
+    .section {
+      padding: 5rem var(--pad);
+      max-width: var(--max);
+      margin: 0 auto;
+      border-bottom: .5px solid var(--border);
+    }
+    .eyebrow {
+      font-size: .65rem; letter-spacing: .24em; text-transform: uppercase;
+      color: var(--primary); margin-bottom: .6rem;
+      display: flex; align-items: center; gap: .8rem;
+    }
+    .eyebrow::before {
+      content: ''; width: 24px; height: .5px;
+      background: var(--primary); flex-shrink: 0;
+    }
+    .sec-title {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(1.6rem, 3vw, 2rem);
+      font-weight: 400; color: var(--text);
+      margin-bottom: .5rem;
+    }
+    .sec-desc {
+      font-size: .85rem; color: var(--text-muted);
+      max-width: 480px; line-height: 1.8; margin-bottom: 3rem;
+    }
+
+    /* ── TIMELINE ── */
+    .tl { position: relative; padding-left: 2.5rem; }
+    .tl::before {
+      content: ''; position: absolute; left: 0; top: .6rem; bottom: 0;
+      width: .5px; background: var(--primary-border);
+    }
+    .tl-item { position: relative; margin-bottom: 3.5rem; padding-left: 1.2rem; }
+    .tl-item:last-child { margin-bottom: 0; }
+    .tl-dot {
+      position: absolute; left: -2.5rem; top: .3rem;
+      width: 30px; height: 30px; border-radius: 50%;
+      background: var(--primary-light); border: 1.5px solid var(--primary);
+      display: flex; align-items: center; justify-content: center;
+      transform: translateX(-1px);
+    }
+    .tl-dot svg {
+      width: 13px; height: 13px; stroke: var(--primary);
+      fill: none; stroke-width: 2;
+      stroke-linecap: round; stroke-linejoin: round;
+    }
+    .tl-period {
+      font-size: .65rem; letter-spacing: .15em; text-transform: uppercase;
+      color: var(--primary);
+    }
+    .tl-co {
+      font-size: .72rem; color: var(--text-faint);
+      margin: .15rem 0 .3rem;
+    }
+    .tl-role {
+      font-family: 'Fraunces', serif;
+      font-size: 1.3rem; font-weight: 400; color: var(--text);
+      margin-bottom: .5rem; line-height: 1.25;
+    }
+    .tl-desc {
+      font-size: .85rem; color: var(--text-muted);
+      max-width: 520px; line-height: 1.85;
+    }
+
+    /* ── SKILLS ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    @media (max-width: 640px) {
+      .skills-grid { grid-template-columns: 1fr; }
+    }
+    @media (min-width: 641px) and (max-width: 900px) {
+      .skills-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .skill-head {
+      display: flex; align-items: center; gap: .7rem; margin-bottom: .5rem;
+    }
+    .skill-icon {
+      width: 30px; height: 30px; border-radius: 50%;
+      background: var(--primary-light);
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .skill-icon svg {
+      width: 13px; height: 13px; stroke: var(--primary);
+      fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+    }
+    .skill-title { font-size: .85rem; font-weight: 500; color: var(--text); }
+    .skill-desc {
+      font-size: .8rem; color: var(--text-muted);
+      line-height: 1.75; padding-left: 2.3rem;
+    }
+
+    /* ── CASES ── */
+    .case-card {
+      background: var(--card-bg);
+      border-radius: 10px; border: .5px solid rgba(61,92,50,.18);
+      overflow: hidden; margin-bottom: .8rem;
+    }
+    .case-btn {
+      width: 100%; text-align: left;
+      padding: 1.5rem 1.8rem;
+      background: none; border: none; cursor: pointer;
+      display: flex; justify-content: space-between;
+      align-items: flex-start; gap: 1rem;
+      transition: background .2s;
+    }
+    .case-btn:hover { background: rgba(61,92,50,.03); }
+    .case-num {
+      font-size: .65rem; letter-spacing: .18em; text-transform: uppercase;
+      color: var(--primary); font-weight: 500; margin-bottom: .5rem;
+    }
+    .case-title {
+      font-family: 'Fraunces', serif;
+      font-size: 1.05rem; font-weight: 400; color: var(--text);
+      line-height: 1.3; margin-bottom: .5rem; text-align: left;
+    }
+    .case-ctx {
+      font-size: .82rem; color: var(--text-muted);
+      line-height: 1.8; max-width: 580px; text-align: left;
+    }
+    .chevron {
+      width: 18px; height: 18px; stroke: var(--text-faint);
+      fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+      flex-shrink: 0; margin-top: .2rem;
+      transition: transform .3s;
+    }
+    .chevron.open { transform: rotate(180deg); }
+    .case-body {
+      display: none;
+      padding: 1.5rem 1.8rem 1.8rem;
+      border-top: .5px solid rgba(61,92,50,.1);
+      background: rgba(61,92,50,.02);
+    }
+    .case-body.open { display: block; }
+    .cs-block { display: flex; gap: .8rem; margin-bottom: 1.5rem; }
+    .cs-block:last-child { margin-bottom: 0; }
+    .cs-icon {
+      width: 15px; height: 15px; stroke: var(--primary);
+      fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+      flex-shrink: 0; margin-top: .2rem;
+    }
+    .cs-label {
+      font-size: .62rem; letter-spacing: .18em; text-transform: uppercase;
+      color: var(--primary); font-weight: 500; margin-bottom: .6rem;
+    }
+    .cs-list { list-style: none; display: flex; flex-direction: column; gap: .4rem; }
+    .cs-list li {
+      font-size: .82rem; color: var(--text-muted);
+      line-height: 1.7; display: flex; gap: .5rem;
+    }
+    .cs-list li::before {
+      content: ''; width: 4px; height: 4px; border-radius: 50%;
+      background: var(--primary); flex-shrink: 0; margin-top: .55rem;
+    }
+    .cs-closing {
+      font-size: .78rem; color: rgba(28,34,24,.35);
+      font-style: italic; margin-top: .6rem;
+    }
+    .metrics-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: .5rem;
+    }
+    @media (max-width: 600px) {
+      .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .m-box {
+      background: rgba(61,92,50,.06);
+      border: .5px solid rgba(61,92,50,.12);
+      border-radius: 6px; padding: .8rem;
+    }
+    .m-val {
+      font-family: 'Fraunces', serif;
+      font-size: 1.3rem; font-weight: 400; color: var(--primary); line-height: 1;
+    }
+    .m-lbl {
+      font-size: .62rem; color: var(--text-muted);
+      margin-top: .25rem; line-height: 1.3;
+    }
+    .consolidation {
+      border-top: .5px solid rgba(61,92,50,.1);
+      padding-top: 1.2rem; margin-top: 1.5rem;
+    }
+    .consolidation p {
+      font-size: .82rem; color: var(--text);
+      font-style: italic; line-height: 1.8;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--bg-alt);
+      padding: 4rem var(--pad);
+      border-top: .5px solid var(--border);
+    }
+    .footer-inner {
+      max-width: var(--max); margin: 0 auto;
+    }
+    .footer-title {
+      font-family: 'Fraunces', serif;
+      font-size: 1.8rem; font-weight: 400; color: var(--text); margin-bottom: .8rem;
+    }
+    .footer-desc {
+      font-size: .85rem; color: var(--text-muted);
+      max-width: 420px; line-height: 1.8; margin-bottom: 2rem;
+    }
+    .footer-links { display: flex; flex-direction: column; gap: .7rem; }
+    .footer-link {
+      display: inline-flex; align-items: center; gap: .5rem;
+      font-size: .85rem; color: var(--text);
+      text-decoration: none; transition: color .2s;
+    }
+    .footer-link:hover { color: var(--primary); }
+    .footer-link svg {
+      width: 14px; height: 14px; stroke: currentColor;
+      fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+    }
+    .copy {
+      margin-top: 3rem;
+      font-size: .65rem; color: rgba(28,34,24,.25);
+      letter-spacing: .1em; text-transform: uppercase;
+    }
+
+    /* ── RESPONSIVE NAV ── */
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      .hero-name { white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#inicio" class="nav-logo">Taciana Sevilhano</a>
+  <ul class="nav-links">
+    <li><a href="#trajetoria">Trajetória</a></li>
+    <li><a href="#competencias">Como atuo</a></li>
+    <li><a href="#cases">Cases</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div id="inicio" class="section" style="text-align:center;border-bottom:.5px solid var(--border)">
+  <span class="hero-badge">Product Manager Sênior · São Paulo</span>
+  <h1 class="hero-name">Taciana de Moraes Sevilhano</h1>
+  <p class="hero-subtitle">Estratégia & Escala de Plataformas Digitais</p>
+  <p class="hero-bio">PM com 5 anos no ecossistema figital de varejo, especializada em escala de plataformas digitais complexas — App, Marketplace, Social Commerce, Logística e Atendimento — do discovery à operação em escala.</p>
+  <p class="hero-bio">Tenho histórico consistente de transformar fricções operacionais em soluções com resultado mensurável: elevei a nota do App de 3,3 para 4,9, cresci receita em ~50% nos canais digitais e implantei um Agente de Atendimento com IA que atingiu 96% de taxa de resolução em 43+ propriedades digitais.</p>
+  <p class="hero-bio">Atuo na intersecção entre tecnologia, dados e negócio — liderando squads multidisciplinares com ownership end-to-end, cultura data-driven e decisões guiadas por métricas de performance e confiabilidade.</p>
+  <div class="hero-ctas">
+    <a href="#cases" class="btn-primary">Ver Cases</a>
+    <a href="https://www.linkedin.com/in/taciana-de-moraes-sevilhano/" target="_blank" class="btn-outline">LinkedIn ↗</a>
+  </div>
+</div>
+
+<!-- TRAJETÓRIA -->
+<div id="trajetoria" class="section">
+  <div class="eyebrow">Trajetória</div>
+  <h2 class="sec-title">Evolução profissional</h2>
+  <p class="sec-desc">Uma trajetória que combina experiência prática com cliente e operação e evolução consistente para produto digital e plataformas.</p>
+
+  <div class="tl">
+
+    <div class="tl-item">
+      <div class="tl-dot">
+        <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      </div>
+      <div class="tl-period">Jan/2025 – Atual</div>
+      <div class="tl-co">Product Manager – Canais Digitais & Cliente · ALLOS</div>
+      <div class="tl-role">Produto Digital & IA</div>
+      <div class="tl-desc">PM responsável pelos canais digitais próprios da ALLOS em um ecossistema com dezenas de shoppings. Atuo na intersecção entre produto, tecnologia e operação — estruturando governança, liderando squad multidisciplinar e conduzindo decisões estratégicas com foco em escala e sustentabilidade dos canais.</div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot">
+        <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+      </div>
+      <div class="tl-period">2022 – 2024</div>
+      <div class="tl-co">Product Manager / PO – Squad de Vendas Digitais · ALLOS</div>
+      <div class="tl-role">E-commerce & Social Commerce</div>
+      <div class="tl-desc">Responsável pela construção dos canais digitais de vendas dos Shopping Centers — um ambiente omnichannel de alta complexidade, com múltiplos stakeholders e operações distribuídas. Vim para estruturar o que ainda não tinha forma: organizar a operação digital, definir prioridades e criar as bases para crescer com eficiência.</div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot">
+        <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+      </div>
+      <div class="tl-period">Jul/2020 – 2022</div>
+      <div class="tl-co">Coordenadora de Inovação – Plataformas Digitais · Aliansce Sonae</div>
+      <div class="tl-role">Inovação, Marketplaces & Omnichannel</div>
+      <div class="tl-desc">Primeiro contato com produto digital em sentido amplo — responsável por levar o varejo físico ao canal online em múltiplos shoppings. Um projeto de construção estrutural desde o zero, conectando mundos muito diferentes: lojistas, tecnologia, logística e experiência do cliente.</div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot">
+        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <div class="tl-period">2012 – 2020</div>
+      <div class="tl-co">Coordenadora Regional de Relacionamento · Aliansce Shopping Centers</div>
+      <div class="tl-role">Experiência do Cliente & Operações</div>
+      <div class="tl-desc">Oito anos liderando estratégia de CX em contexto multishopping — onde aprendi que entender o cliente de dentro da operação é o que separa uma boa decisão de uma decisão que funciona de verdade.</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- COMPETÊNCIAS -->
+<div id="competencias" class="section">
+  <div class="eyebrow">Competências</div>
+  <h2 class="sec-title">Como atuo como PM de Plataformas & Operações</h2>
+  <p class="sec-desc">Minha atuação vai além da gestão de backlog. Trago visão sistêmica, governança e orientação a resultado para ambientes de alta complexidade.</p>
+
+  <div class="skills-grid">
+    <div>
+      <div class="skill-head">
+        <div class="skill-icon"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 5-7 13-7 13S5 14 5 9a7 7 0 0 1 7-7z"/></svg></div>
+        <span class="skill-title">Estrutura antes de Escala</span>
+      </div>
+      <p class="skill-desc">Construo base sólida de métricas, processos e critérios de aceite — PRDs e user stories com clareza — antes de escalar qualquer solução.</p>
+    </div>
+    <div>
+      <div class="skill-head">
+        <div class="skill-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+        <span class="skill-title">Decisão orientada a impacto</span>
+      </div>
+      <p class="skill-desc">Priorizo com base em eficiência operacional, viabilidade técnica e impacto financeiro. Conduzo trade-offs explícitos entre negócio, UX e tecnologia.</p>
+    </div>
+    <div>
+      <div class="skill-head">
+        <div class="skill-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+        <span class="skill-title">Diagnóstico profundo</span>
+      </div>
+      <p class="skill-desc">Entro na operação, mapeio fricções reais e valido hipóteses via MVPs, pilotos e rollouts graduais antes de escalar qualquer solução.</p>
+    </div>
+    <div>
+      <div class="skill-head">
+        <div class="skill-icon"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+        <span class="skill-title">Governança & Métricas</span>
+      </div>
+      <p class="skill-desc">Estruturo frameworks de métricas de performance e confiabilidade que viabilizam identificação autônoma de gargalos e cultura data-driven real.</p>
+    </div>
+    <div>
+      <div class="skill-head">
+        <div class="skill-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <span class="skill-title">Visão figital</span>
+      </div>
+      <p class="skill-desc">Conecto físico e digital em ecossistemas complexos de varejo — integrando lojistas, logística, pagamentos e canais conversacionais em operação coesa.</p>
+    </div>
+    <div>
+      <div class="skill-head">
+        <div class="skill-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></div>
+        <span class="skill-title">Eficiência & Automação</span>
+      </div>
+      <p class="skill-desc">Liderei end-to-end a implantação de agente de IA em 43+ propriedades — reduzindo transbordo humano em 35% e atingindo 96% de resolução.</p>
+    </div>
+  </div>
+</div>
+
+<!-- CASES -->
+<div id="cases" class="section">
+  <div class="eyebrow">Cases</div>
+  <h2 class="sec-title">Do problema ao impacto</h2>
+  <p class="sec-desc">Três projetos que ilustram como estruturar plataformas digitais com governança, eficiência operacional e resultados mensuráveis.</p>
+
+  <!-- Case 01 -->
+  <div class="case-card">
+    <button class="case-btn" onclick="toggleCase(this)">
+      <div>
+        <div class="case-num">Case 01</div>
+        <div class="case-title">Reestruturação de Canal Digital: Eficiência Operacional com Impacto em Receita</div>
+        <div class="case-ctx">Com o crescimento acelerado do canal de vendas via WhatsApp, a operação passou a apresentar fricções estruturais e baixa governança. Este projeto transformou um canal operacionalmente frágil em uma estrutura escalável e orientada por impacto financeiro.</div>
+      </div>
+      <svg class="chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+    </button>
+    <div class="case-body">
+      <div class="cs-block">
+        <svg class="cs-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <div>
+          <div class="cs-label">Desafio</div>
+          <ul class="cs-list">
+            <li>Processos manuais e fragmentados entre plataformas</li>
+            <li>Reclamações recorrentes da operação</li>
+            <li>Perda de clientes no fluxo conversacional</li>
+            <li>Alto índice de chargeback</li>
+            <li>Ausência de governança estruturada</li>
+          </ul>
+          <p class="cs-closing">O canal crescia em volume, mas não em maturidade ou previsibilidade.</p>
+        </div>
+      </div>
+      <div class="cs-block">
+        <svg class="cs-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        <div>
+          <div class="cs-label">Estratégia</div>
+          <ul class="cs-list">
+            <li>Mapeamento completo da jornada (cliente + operação)</li>
+            <li>Imersão prática na operação para identificar fricções reais</li>
+            <li>Construção de matriz de priorização e roadmap focado em eficiência</li>
+            <li>Migração de fornecedor conversacional com rollout 100% bem-sucedido</li>
+            <li>Desenvolvimento de 3 produtos proprietários (gestão de pedidos, comunicação operacional e logística)</li>
+            <li>Faseamento de governança de indicadores para garantir previsibilidade</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cs-block">
+        <svg class="cs-icon" viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        <div style="width:100%">
+          <div class="cs-label">Resultados (em 6 meses)</div>
+          <div class="metrics-grid">
+            <div class="m-box"><div class="m-val">+75%</div><div class="m-lbl">crescimento aproximado de GMV</div></div>
+            <div class="m-box"><div class="m-val">+38%</div><div class="m-lbl">aumento de conversão</div></div>
+            <div class="m-box"><div class="m-val">-33%</div><div class="m-lbl">redução de abandono</div></div>
+            <div class="m-box"><div class="m-val">-80%</div><div class="m-lbl">tempo de 1º atendimento</div></div>
+            <div class="m-box"><div class="m-val">-25%</div><div class="m-lbl">tempo médio de jornada</div></div>
+            <div class="m-box"><div class="m-val">-98%</div><div class="m-lbl">redução de chargeback</div></div>
+            <div class="m-box"><div class="m-val">+45%</div><div class="m-lbl">volume mantendo eficiência</div></div>
+            <div class="m-box"><div class="m-val">100%</div><div class="m-lbl">eliminação de perda no fluxo</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="consolidation"><p>Esse projeto consolidou minha atuação como PM de plataformas operacionais, conduzindo decisões estruturais que equilibraram crescimento, eficiência e governança.</p></div>
+    </div>
+  </div>
+
+  <!-- Case 02 -->
+  <div class="case-card">
+    <button class="case-btn" onclick="toggleCase(this)">
+      <div>
+        <div class="case-num">Case 02</div>
+        <div class="case-title">Implantação de Agente de Atendimento com IA em Escala</div>
+        <div class="case-ctx">Com o aumento do volume de atendimentos digitais, tornou-se necessário evoluir de um modelo reativo para uma estrutura conversacional escalável e governada. Este projeto consolidou a IA como plataforma estratégica de atendimento.</div>
+      </div>
+      <svg class="chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+    </button>
+    <div class="case-body">
+      <div class="cs-block">
+        <svg class="cs-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <div>
+          <div class="cs-label">Desafio</div>
+          <ul class="cs-list">
+            <li>Taxa de resolução limitada (~62%)</li>
+            <li>Alto transbordo para atendimento humano</li>
+            <li>Escalabilidade restrita</li>
+            <li>Ausência de governança centralizada da IA</li>
+          </ul>
+          <p class="cs-closing">Era necessário transformar o bot operacional em plataforma estruturada.</p>
+        </div>
+      </div>
+      <div class="cs-block">
+        <svg class="cs-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        <div>
+          <div class="cs-label">Estratégia</div>
+          <ul class="cs-list">
+            <li>Condução de POC estruturada para validação da solução</li>
+            <li>Definição de modelo conversacional orientado a intenção</li>
+            <li>Estruturação de governança centralizada</li>
+            <li>Rollout faseado para 43+ propriedades digitais</li>
+            <li>Alinhamento de métricas com operação e dados</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cs-block">
+        <svg class="cs-icon" viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        <div style="width:100%">
+          <div class="cs-label">Resultados</div>
+          <div class="metrics-grid">
+            <div class="m-box"><div class="m-val">95%</div><div class="m-lbl">taxa de resolução (vs 62%)</div></div>
+            <div class="m-box"><div class="m-val">5%</div><div class="m-lbl">transbordo para atendimento humano</div></div>
+            <div class="m-box"><div class="m-val">43+</div><div class="m-lbl">propriedades com IA em escala</div></div>
+            <div class="m-box"><div class="m-val">Base</div><div class="m-lbl">preparada para expansão omnichannel</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="consolidation"><p>Reforcei minha atuação na estruturação de plataformas conversacionais escaláveis, combinando eficiência operacional, governança e visão de longo prazo.</p></div>
+    </div>
+  </div>
+
+  <!-- Case 03 -->
+  <div class="case-card">
+    <button class="case-btn" onclick="toggleCase(this)">
+      <div>
+        <div class="case-num">Case 03</div>
+        <div class="case-title">Estruturação de Marketplaces para Expansão Omnichannel</div>
+        <div class="case-ctx">Como parte da estratégia de fortalecimento do ecossistema digital, participei da criação de marketplaces proprietários para expandir as vendas físicas para o canal online. O projeto envolveu a construção de uma operação digital integrada e escalável.</div>
+      </div>
+      <svg class="chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+    </button>
+    <div class="case-body">
+      <div class="cs-block">
+        <svg class="cs-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <div>
+          <div class="cs-label">Desafio</div>
+          <ul class="cs-list">
+            <li>Conectar lojistas físicos ao canal online</li>
+            <li>Estruturar operação logística proprietária</li>
+            <li>Garantir experiência consistente ao cliente</li>
+            <li>Criar modelo replicável para múltiplos shoppings</li>
+          </ul>
+          <p class="cs-closing">Era uma construção estrutural, não uma otimização incremental.</p>
+        </div>
+      </div>
+      <div class="cs-block">
+        <svg class="cs-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        <div>
+          <div class="cs-label">Estratégia</div>
+          <ul class="cs-list">
+            <li>Responsável pela implementação da frente de logística e atendimento</li>
+            <li>Estruturação da operação logística proprietária</li>
+            <li>Organização de fluxos operacionais e governança</li>
+            <li>Interface entre Produto, Tecnologia e Operações</li>
+            <li>Implantação de 17 HUBs logísticos físicos</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cs-block">
+        <svg class="cs-icon" viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        <div style="width:100%">
+          <div class="cs-label">Resultados</div>
+          <div class="metrics-grid">
+            <div class="m-box"><div class="m-val">7</div><div class="m-lbl">marketplaces implantados</div></div>
+            <div class="m-box"><div class="m-val">17</div><div class="m-lbl">HUBs físicos implementados</div></div>
+            <div class="m-box"><div class="m-val">Logística</div><div class="m-lbl">proprietária estruturada</div></div>
+            <div class="m-box"><div class="m-val">Base</div><div class="m-lbl">operacional preparada para escala</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="consolidation"><p>Esse projeto marcou minha atuação na construção de plataformas operacionais complexas desde a base, integrando digital e físico para viabilizar novos modelos de negócio.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER / CONTATO -->
+<footer id="contato">
+  <div class="footer-inner">
+    <h2 class="footer-title">Vamos conversar?</h2>
+    <p class="footer-desc">Gosto de atuar em contextos desafiadores, com produtos relevantes, times maduros e problemas que exigem visão sistêmica, clareza e colaboração para gerar impacto real.</p>
+    <div class="footer-links">
+      <a href="mailto:taciana.sevilhano@gmail.com" class="footer-link">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        taciana.sevilhano@gmail.com
+      </a>
+      <a href="https://www.linkedin.com/in/taciana-de-moraes-sevilhano/" target="_blank" class="footer-link">
+        <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn
+      </a>
+    </div>
+    <p class="copy">© 2025 — Taciana Sevilhano</p>
+  </div>
+</footer>
+
+<script>
+  function toggleCase(btn) {
+    const body = btn.nextElementSibling;
+    const chev = btn.querySelector('.chevron');
+    const isOpen = body.classList.contains('open');
+    document.querySelectorAll('.case-body').forEach(b => b.classList.remove('open'));
+    document.querySelectorAll('.chevron').forEach(c => c.classList.remove('open'));
+    if (!isOpen) {
+      body.classList.add('open');
+      chev.classList.add('open');
+    }
+  }
+</script>
+
+</body>
+</html>
