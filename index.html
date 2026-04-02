@@ -7,23 +7,24 @@
   <meta name="description" content="Portfolio de Taciana Sevilhano — Product Manager Sênior especializada em Estratégia & Escala de Plataformas Digitais." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg: #f5f2eb;
-      --bg-alt: #ede9e0;
-      --text: #1c2218;
-      --text-muted: rgba(28,34,24,.52);
-      --text-faint: rgba(28,34,24,.35);
+      --bg: #dde4d6;
+      --bg-alt: #d0d9c8;
+      --text: #1e271e;
+      --text-muted: rgba(30,39,30,.85);
+      --text-faint: rgba(30,39,30,.45);
       --primary: #3d5c32;
       --primary-light: rgba(61,92,50,.1);
-      --primary-border: rgba(61,92,50,.2);
-      --border: rgba(61,92,50,.12);
-      --card-bg: #ffffff;
+      --primary-border: rgba(40,50,40,.25);
+      --border: rgba(40,50,40,.12);
+      --card-bg: rgba(255,255,255,.55);
       --max: 860px;
       --pad: clamp(1.5rem, 5vw, 4rem);
+      --font-display: 'Lora', serif;
     }
 
     html { scroll-behavior: smooth; }
@@ -32,7 +33,7 @@
       background: var(--bg);
       color: var(--text);
       font-family: 'DM Sans', sans-serif;
-      font-weight: 300;
+      font-weight: 400;
       line-height: 1.75;
       font-size: 16px;
     }
@@ -40,21 +41,21 @@
     /* ── NAV ── */
     nav {
       position: sticky; top: 0; z-index: 100;
-      background: rgba(245,242,235,.95);
+      background: rgba(221,228,214,.92);
       backdrop-filter: blur(8px);
-      border-bottom: .5px solid var(--border);
+      border-bottom: .5px solid rgba(40,50,40,.15);
       padding: 1.2rem var(--pad);
       display: flex; justify-content: space-between; align-items: center;
     }
     .nav-logo {
-      font-family: 'Fraunces', serif;
+      font-family: var(--font-display);
       font-size: .95rem; letter-spacing: .06em; color: var(--text);
       text-decoration: none;
     }
     .nav-links {
       display: flex; gap: 2rem; list-style: none;
       font-size: .68rem; letter-spacing: .14em; text-transform: uppercase;
-      color: var(--text-faint);
+      color: rgba(30,39,30,.7);
     }
     .nav-links a {
       color: inherit; text-decoration: none; transition: color .2s;
@@ -67,7 +68,8 @@
       max-width: var(--max);
       margin: 0 auto;
       border-bottom: .5px solid var(--border);
-      text-align: center;
+      text-align: left;
+      width: 100%;
     }
     .hero-badge {
       display: inline-block;
@@ -78,15 +80,15 @@
       margin-bottom: 2rem;
     }
     .hero-name {
-      font-family: 'Fraunces', serif;
-      font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
       font-weight: 400; line-height: 1.05;
       color: var(--text);
       white-space: nowrap;
       margin-bottom: .6rem;
     }
     .hero-subtitle {
-      font-family: 'Fraunces', serif;
+      font-family: var(--font-display);
       font-size: clamp(1rem, 2vw, 1.3rem);
       font-weight: 300; font-style: italic;
       color: var(--primary);
@@ -94,11 +96,11 @@
     }
     .hero-bio {
       font-size: .9rem; color: var(--text-muted);
-      max-width: 620px; margin: 0 auto .8rem;
-      line-height: 1.9; text-align: center;
+      max-width: 640px; margin: 0 0 .8rem;
+      line-height: 1.9; text-align: left;
     }
     .hero-ctas {
-      display: flex; gap: 1rem; justify-content: center;
+      display: flex; gap: 1rem; justify-content: flex-start;
       flex-wrap: wrap; margin-top: 2.5rem;
     }
     .btn-primary {
@@ -138,7 +140,7 @@
       background: var(--primary); flex-shrink: 0;
     }
     .sec-title {
-      font-family: 'Fraunces', serif;
+      font-family: var(--font-display);
       font-size: clamp(1.6rem, 3vw, 2rem);
       font-weight: 400; color: var(--text);
       margin-bottom: .5rem;
@@ -173,11 +175,11 @@
       color: var(--primary);
     }
     .tl-co {
-      font-size: .72rem; color: var(--text-faint);
+      font-size: .72rem; color: rgba(30,39,30,.8);
       margin: .15rem 0 .3rem;
     }
     .tl-role {
-      font-family: 'Fraunces', serif;
+      font-family: var(--font-display);
       font-size: 1.3rem; font-weight: 400; color: var(--text);
       margin-bottom: .5rem; line-height: 1.25;
     }
@@ -236,7 +238,7 @@
       color: var(--primary); font-weight: 500; margin-bottom: .5rem;
     }
     .case-title {
-      font-family: 'Fraunces', serif;
+      font-family: var(--font-display);
       font-size: 1.05rem; font-weight: 400; color: var(--text);
       line-height: 1.3; margin-bottom: .5rem; text-align: left;
     }
@@ -294,7 +296,7 @@
       border-radius: 6px; padding: .8rem;
     }
     .m-val {
-      font-family: 'Fraunces', serif;
+      font-family: var(--font-display);
       font-size: 1.3rem; font-weight: 400; color: var(--primary); line-height: 1;
     }
     .m-lbl {
@@ -320,7 +322,7 @@
       max-width: var(--max); margin: 0 auto;
     }
     .footer-title {
-      font-family: 'Fraunces', serif;
+      font-family: var(--font-display);
       font-size: 1.8rem; font-weight: 400; color: var(--text); margin-bottom: .8rem;
     }
     .footer-desc {
@@ -365,13 +367,13 @@
 </nav>
 
 <!-- HERO -->
-<div id="inicio" class="section" style="text-align:center;border-bottom:.5px solid var(--border)">
-  <span class="hero-badge">Product Manager Sênior · São Paulo</span>
+<div id="inicio" class="section" style="border-bottom:.5px solid var(--border);text-align:left">
+  <span class="hero-badge">Product Manager · São Paulo</span>
   <h1 class="hero-name">Taciana de Moraes Sevilhano</h1>
   <p class="hero-subtitle">Estratégia & Escala de Plataformas Digitais</p>
   <p class="hero-bio">PM com 5 anos no ecossistema figital de varejo, especializada em escala de plataformas digitais complexas — App, Marketplace, Social Commerce, Logística e Atendimento — do discovery à operação em escala.</p>
-  <p class="hero-bio">Tenho histórico consistente de transformar fricções operacionais em soluções com resultado mensurável: elevei a nota do App de 3,3 para 4,9, cresci receita em ~50% nos canais digitais e implantei um Agente de Atendimento com IA que atingiu 96% de taxa de resolução em 43+ propriedades digitais.</p>
-  <p class="hero-bio">Atuo na intersecção entre tecnologia, dados e negócio — liderando squads multidisciplinares com ownership end-to-end, cultura data-driven e decisões guiadas por métricas de performance e confiabilidade.</p>
+  <p class="hero-bio">Histórico consistente de transformar fricções operacionais em soluções com impacto mensurável: nota do App de 3,3 para 4,9, ~50% de crescimento de receita nos canais digitais e Agente de Atendimento com IA com 96% de taxa de resolução em 43+ propriedades digitais.</p>
+  <p class="hero-bio">Produto na intersecção entre tecnologia, dados e negócio: priorização baseada em dados, decisões conectadas à estratégia e impacto mensurável em cada entrega.</p>
   <div class="hero-ctas">
     <a href="#cases" class="btn-primary">Ver Cases</a>
     <a href="https://www.linkedin.com/in/taciana-de-moraes-sevilhano/" target="_blank" class="btn-outline">LinkedIn ↗</a>
@@ -659,9 +661,9 @@
     <h2 class="footer-title">Vamos conversar?</h2>
     <p class="footer-desc">Gosto de atuar em contextos desafiadores, com produtos relevantes, times maduros e problemas que exigem visão sistêmica, clareza e colaboração para gerar impacto real.</p>
     <div class="footer-links">
-      <a href="mailto:taciana.sevilhano@gmail.com" class="footer-link">
+      <a href="/cdn-cgi/l/email-protection#4135202228202f206f322437282d29202f2e01262c20282d6f222e2c" class="footer-link">
         <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        taciana.sevilhano@gmail.com
+        <span class="__cf_email__" data-cfemail="d1a5b0b2b8b0bfb0ffa2b4a7b8bdb9b0bfbe91b6bcb0b8bdffb2bebc">[email&#160;protected]</span>
       </a>
       <a href="https://www.linkedin.com/in/taciana-de-moraes-sevilhano/" target="_blank" class="footer-link">
         <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
@@ -672,19 +674,9 @@
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   function toggleCase(btn) {
     const body = btn.nextElementSibling;
     const chev = btn.querySelector('.chevron');
     const isOpen = body.classList.contains('open');
-    document.querySelectorAll('.case-body').forEach(b => b.classList.remove('open'));
-    document.querySelectorAll('.chevron').forEach(c => c.classList.remove('open'));
-    if (!isOpen) {
-      body.classList.add('open');
-      chev.classList.add('open');
-    }
-  }
-</script>
-
-</body>
-</html>
+    document.querySelectorAll('.cas
